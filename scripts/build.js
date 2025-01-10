@@ -4,7 +4,8 @@ const { marked } = require('marked');
 const frontMatter = require('front-matter');
 
 async function build() {
-    // Create public directory
+    // Clean public directory first
+    await fs.remove('public');
     await fs.ensureDir('public');
     
     // Copy static assets
@@ -29,15 +30,19 @@ async function build() {
             
             // Replace template variables
             const finalHtml = template
-                .replace('{{title}}', attributes.title)
+                .replace('{{title}}', attributes.title || 'My Site')
                 .replace('{{content}}', html);
             
-            // Write output file
-            const outputPath = path.join(
-                'public',
-                file.replace('.md', '.html')
-            );
-            await fs.outputFile(outputPath, finalHtml);
+            // Handle file output
+            if (file === 'index.md') {
+                // Main index.html goes in root
+                await fs.outputFile('public/index.html', finalHtml);
+            } else {
+                // All other pages go in their own directories
+                const pageName = file.replace('.md', '');
+                const outputPath = path.join('public', pageName, 'index.html');
+                await fs.outputFile(outputPath, finalHtml);
+            }
         }
     }
 }
