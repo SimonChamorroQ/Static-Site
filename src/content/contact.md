@@ -1,6 +1,6 @@
 ---
 title: Contact Me
-template: base
+template: contact
 ---
 
 # Get in Touch

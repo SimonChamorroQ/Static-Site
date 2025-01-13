@@ -4,11 +4,17 @@
   "description": "Simple static site generator",
   "scripts": {
     "build": "node scripts/build.js",
-    "serve": "node scripts/serve.js"
+    "serve": "node scripts/serve.js",
+    "dev": "nodemon --watch src --ext html,css,js,md --exec 'npm run build' & npm run serve"
   },
   "dependencies": {
     "marked": "^4.0.0",
     "front-matter": "^4.0.0",
-    "fs-extra": "^10.0.0"
+    "fs-extra": "^10.0.0",
+    "dotenv": "^16.0.3",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 } 

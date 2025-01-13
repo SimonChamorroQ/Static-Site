@@ -22,3 +22,13 @@ Welcome to my blog! Here you'll find my thoughts and tutorials on web developmen
 - Web Development
 - Best Practices
 - Personal Projects 
+
+## Next Steps
+
+After mastering the basics, you can move on to:
+
+1. Learning a framework
+2. Understanding databases
+3. Exploring backend development
+
+Stay tuned for more posts in this series! 

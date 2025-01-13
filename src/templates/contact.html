@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="/">🚀</a>
+            </div>
+            <div class="site-title">
+                <a href="/">Simon's Tech Blog</a>
+            </div>
+            <div class="header-right">
+                <button class="search-btn">🔍</button>
+                <button class="share-btn">📤</button>
+                <button class="subscribe-btn">Subscribe</button>
+                <button class="sign-in-btn">Sign in</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+            <a href="/contact" class="active">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content-container">
+            <div class="page-header">
+                <h1>{{title}}</h1>
+            </div>
+            <div class="page-content">
+                {{content}}
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Simon's Tech Blog. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="/scripts/main.js"></script>
+</body>
+</html> 

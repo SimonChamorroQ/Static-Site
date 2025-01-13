@@ -1,6 +1,6 @@
 ---
 title: About Me
-template: base
+template: about
 ---
 
 # About Me
